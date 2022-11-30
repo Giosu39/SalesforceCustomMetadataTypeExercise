@@ -7,14 +7,14 @@ public class Scontistica {
             [SELECT accountId, sum(amount)amount FROM opportunity 
              WHERE stageName = 'Closed Won' and amount>0 GROUP BY accountId];
         
-        List<Sconti__mdt> sconti = [SELECT Percentuale_sconto__c, Totale_speso__c FROM Sconti__mdt ORDER BY Totale_speso__c DESC];
+        List<Account_Sconti__mdt> sconti = [SELECT Percentuale_sconto__c, Totale_speso__c FROM Account_Sconti__mdt ORDER BY Totale_speso__c DESC];
         
         for (Opportunity o : opps) {
             boolean found = false;
             for (AggregateResult a : accs) {
                 if (a.get('accountId') == o.accountId) {
                     found = true;
-                    for (Sconti__mdt sconto : sconti) {
+                    for (Account_Sconti__mdt sconto : sconti) {
                         if(a.get('amount') == NULL){
                             result.add(o);
                             break;

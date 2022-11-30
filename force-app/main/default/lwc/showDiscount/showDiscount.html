@@ -1,10 +1,10 @@
 <template>
     <div class="slds-align_absolute-center">
-        <lightning-button label="Applica sconto" variant='brand' onclick={applyDiscount}></lightning-button>
+        <lightning-button label="Applica sconto" variant='neutral' onclick={applyDiscount}></lightning-button>
     </div>
     <div class="slds-grid">
         <div class="slds-col slds-size_1-of-2">
-            <div class="slds-align_absolute-center custom1" style="font-size:30px; text-decoration: underline;">
+            <div class="slds-align_absolute-center custom1" style="font-size:30px; color: white;text-decoration: underline;">
                 UNDISCOUNTED
             </div>
             <lightning-datatable
@@ -15,7 +15,7 @@
         </div>
         <div class="slds-col slds-size_1-of-2">
             
-            <div class="slds-align_absolute-center custom1" style="font-size:30px; text-decoration: underline;">
+            <div class="slds-align_absolute-center custom1" style="font-size:30px; color: white; text-decoration: underline;">
                 DISCOUNT
             </div>
             <lightning-datatable

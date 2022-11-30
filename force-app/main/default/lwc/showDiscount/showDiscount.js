@@ -39,4 +39,4 @@ export default class ShowDiscount extends LightningElement {
             this.discounted = result
         });
     }
-} 
+}
